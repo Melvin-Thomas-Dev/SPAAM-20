@@ -1370,8 +1370,22 @@ p {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
+.single-team .team-content .sub-tile {
+  font-size: 16px;
+  color: #1b273d;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
 @media (max-width: 767px) {
   .single-team .team-content .sub-title {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .single-team .team-content .sub-tile {
     font-size: 14px;
   }
 }
@@ -1395,6 +1409,9 @@ p {
   color: #fff;
 }
 .single-team:hover .team-content .sub-title {
+  color: #fff;
+}
+.single-team:hover .team-content .sub-tile {
   color: #fff;
 }
 .single-gallery {
