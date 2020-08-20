@@ -13,6 +13,12 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.col-center-block {
+  float: none;
+  display: block;
+  margin: 0 auto;
+  /* margin-left: auto; margin-right: auto; */
+}
 img {
   max-width: 100%;
 }
@@ -481,7 +487,7 @@ p {
     transform: rotate(-130deg);
   }
 }
-.header-area {
+/* .header-area {
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -489,7 +495,7 @@ p {
   .header-area {
     padding: 0;
   }
-}
+} */
 .navbar-area {
   padding: 10px 0;
   position: absolute;
