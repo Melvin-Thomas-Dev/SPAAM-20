@@ -1777,6 +1777,7 @@ p {
 .widget .f-title {
   font-size: 24px;
   color: #fff;
+  text-align: center;
 }
 .footer-address .text {
   color: #fff;
@@ -1792,9 +1793,11 @@ p {
 .footer-contact .text {
   color: #fff;
   margin-top: 20px;
+  text-align: center;
 }
 .footer-contact .social {
   margin-top: 30px;
+  text-align: center;
 }
 .footer-contact .social li {
   display: inline-block;
