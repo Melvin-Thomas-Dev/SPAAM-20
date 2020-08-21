@@ -715,7 +715,31 @@ p {
   /* background: #eea243; */
   /* background: #034732; */
   /* background: #01baef; */
-  background: url(../images/bg.jpg);
+  /* background-image: url(../images/hero.jpg) no-repeat; */
+
+/* background-size: cover; */
+background-image: -webkit-linear-gradient(
+    bottom,
+    rgba(71, 125, 59, 0.85) 0%,
+    /*dark*/ rgba(102, 182, 62, 0.5) 100%
+    
+  ),url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: -o-linear-gradient(
+    bottom,
+    rgba(71, 125, 59, 0.85) 0%,
+    /*dark*/ rgba(102, 182, 62, 0.5) 100%
+  ),url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:linear-gradient(
+    to top,
+    rgba(71, 125, 59, 0.85) 0%,
+    /*dark*/ rgba(102, 182, 62, 0.5) 100%
+  ),url(../images/hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .header-countdown .single-count-content {
   padding: 0 45px;
