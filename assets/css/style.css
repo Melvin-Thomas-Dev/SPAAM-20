@@ -1500,19 +1500,13 @@ p {
   opacity: 1;
 }
 .single-pricing {
-  border: 3px solid rgba(79, 139, 65, 0.1);
+  border: 2px;
   padding: 50px 30px;
   -webkit-transition: all 0.3s ease-out 0s;
   -moz-transition: all 0.3s ease-out 0s;
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-}
-
-.single-pricing:hover {
-  -webkit-box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
-  -moz-box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
-  box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
 }
 .single-pricing .pricing-name .pricing-title {
   font-size: 24px;
@@ -1576,9 +1570,10 @@ p {
 }
 .single-pricing:hover,
 .single-pricing.active {
-  -webkit-box-shadow: 0 8px 16px 0 rgba(72, 127, 255, 0.1);
-  -moz-box-shadow: 0 8px 16px 0 rgba(72, 127, 255, 0.1);
-  box-shadow: 0 8px 16px 0 rgba(72, 127, 255, 0.1);
+  -webkit-box-shadow: 0px 0px 20px rgb(79, 139, 65);
+  -moz-box-shadow: 0px 0px 20px rgb(79, 139, 65);
+  box-shadow: 0px 0px 20px rgb(79, 139, 65);
+  border: 1px solid transparent;
 }
 .single-client img {
   width: 100%;
