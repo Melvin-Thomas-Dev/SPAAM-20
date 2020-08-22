@@ -14,7 +14,7 @@ const form = document.forms["google-sheet"];
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  if (validateForm()) {
+  if (validateForm() && confirm("Are You Sure?")) {
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then(response => {
         console.log(response);
@@ -44,12 +44,17 @@ function validateForm() {
     email.value == "" ||
     college.value == "" ||
     contactNo.value == "" ||
-    yearOfStudy.value == "" ||
     department.value == "" ||
     ieeeSection.value == "" ||
     ieeeRegion.value == ""
   ) {
     showMessage("alert alert-danger", "Fields shouldn't be empty");
+  } else if (!isValidEmail(email.value)) {
+    showMessage("alert alert-danger", "Invalid Email Address");
+  } else if (!isPhoneValid(contactNo.value)) {
+    showMessage("alert alert-danger", "Phone number invalid");
+  } else if (yearOfStudy.value === "") {
+    showMessage("alert alert-danger", "Year of study not selected");
   } else {
     return true;
   }
@@ -64,6 +69,21 @@ function showMessage(classes, msg) {
   setTimeout(() => {
     div.remove();
   }, 3000);
+}
+
+function isPhoneValid(inputtxt) {
+  // var phoneno = /^\d{10}$/;
+  var phoneno = /^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$/;
+  if (inputtxt.match(phoneno)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+function isValidEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }
 
 // const scriptURL = 'Enter Script url[web app]'

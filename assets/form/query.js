@@ -39,7 +39,15 @@ function isValidForm() {
   if (name.value == "" || email.value == "" || msg.value == "") {
     showMessage("alert alert-danger", "Fields shouldn't be empty");
     return false;
+  } else if (!isValidEmail(email.value)) {
+    showMessage("alert alert-danger", "Enter a valid email");
+    return false;
   } else {
     return true;
   }
+}
+
+function isValidEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
 }

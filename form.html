@@ -32,16 +32,23 @@
 
     <div class="container">
       <div class="form-container">
-        <h2 class="my-5">SPAAM REGISTRATION</h2>
+        <h2 class="my-5">
+          <span class="d-block mb-2">SPAAM Registration</span>
+          <small class="d-block"
+            >Immerse yourself in the world of opportunities.</small
+          >
+        </h2>
         <form method="post" autocomplete="off" name="google-sheet">
-          <div class="form-group">
-            <label for="name">Name: </label>
-            <input type="text" class="form-control" id="name" name="Name" />
-          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <label for="name">Name: </label>
+              <input type="text" class="form-control" id="name" name="Name" />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Email: </label>
-            <input type="text" class="form-control" id="email" name="Email" />
+            <div class="form-group col-sm-6">
+              <label for="email">Email: </label>
+              <input type="text" class="form-control" id="email" name="Email" />
+            </div>
           </div>
 
           <div class="form-group">
@@ -64,29 +71,32 @@
             />
           </div>
 
-          <div class="form-group">
-            <label for="year-of-study">Year of Study: </label>
-            <select
-              class="custom-select"
-              id="year-of-study"
-              name="Year of study"
-            >
-              <option selected>Choose a year</option>
-              <option value="1">First</option>
-              <option value="2">Second</option>
-              <option value="3">Third</option>
-              <option value="4">Fourth</option>
-            </select>
-          </div>
+          <div class="form-row">
+            <div class="form-group col-sm-4">
+              <label for="year-of-study">Year of Study: </label>
+              <select
+                class="custom-select"
+                id="year-of-study"
+                name="Year of study"
+              >
+                <option value="" selected>Choose a year</option>
+                <option value="1">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+                <option value="4">Fourth</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
 
-          <div class="form-group">
-            <label for="department">Department: </label>
-            <input
-              type="text"
-              class="form-control"
-              id="department"
-              name="Department"
-            />
+            <div class="form-group col-sm-8">
+              <label for="department">Department: </label>
+              <input
+                type="text"
+                class="form-control"
+                id="department"
+                name="Department"
+              />
+            </div>
           </div>
 
           <div class="form-group">
@@ -114,7 +124,7 @@
             </select>
           </div>
 
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-info">Submit</button>
         </form>
       </div>
     </div>
