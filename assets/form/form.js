@@ -29,7 +29,9 @@ function deleteBody() {
   let div = document.createElement("div");
   div.innerHTML = `
     <i class="fa fa-check-circle fa-3x" aria-hidden="true"></i>
-    <h3>Your Response Has Been Submitted.</h3>
+    <h3>Thank You For Registering To SPAAM 20.</h3>
+    <br>
+    <h5><a href="./index.html" class="text-white">Back to home</a></h5>
   `;
   div.className = "successContainer";
   console.log(div);
