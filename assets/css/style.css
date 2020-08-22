@@ -1504,6 +1504,12 @@ p {
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
+
+.single-pricing:hover {
+  -webkit-box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
+  box-shadow: 0px 21px 2px -11px rgba(0, 0, 0, 1);
+}
 .single-pricing .pricing-name .pricing-title {
   font-size: 24px;
   text-transform: uppercase;
@@ -2126,8 +2132,12 @@ header:before,
   transition: 0.1s;
 }
 
-
 .timeline-date{
   color: black;
   font-size: 25px;
+
+@media (max-width: 991px) {
+  .register {
+    margin-bottom: 1rem;
+  }
 }
