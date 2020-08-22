@@ -18,14 +18,14 @@ form.addEventListener("submit", e => {
   if (validateForm() && confirm("Are You Sure?")) {
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then(response => {
-        console.log(response);
-        deleteBody();
+        // console.log(response);
+        hideFormDisplaySuccess();
       })
       .catch(error => console.error("Error!", error.message));
   }
 });
 
-function deleteBody() {
+function hideFormDisplaySuccess() {
   document.querySelector(".form-container").style.display = "none";
   let div = document.createElement("div");
   div.innerHTML = `
@@ -35,11 +35,14 @@ function deleteBody() {
     <h5><a href="./index.html" class="text-white">Back to home</a></h5>
   `;
   div.className = "successContainer";
-  console.log(div);
   document.querySelector(".container").appendChild(div);
 }
 
 function validateForm() {
+  const checked = Array.from(
+    document.querySelectorAll("input[name=events]:checked")
+  );
+  const isMember = document.querySelector("input[name=isMember]:checked");
   if (
     name.value == "" ||
     email.value == "" ||
@@ -47,16 +50,19 @@ function validateForm() {
     contactNo.value == "" ||
     department.value == "" ||
     ieeeSection.value == "" ||
-    ieeeRegion.value == "" ||
-    message.value == ""
+    ieeeRegion.value == ""
   ) {
     showMessage("alert alert-danger", "Fields shouldn't be empty");
   } else if (!isValidEmail(email.value)) {
     showMessage("alert alert-danger", "Invalid Email Address");
   } else if (!isPhoneValid(contactNo.value)) {
     showMessage("alert alert-danger", "Phone number invalid");
+  } else if (checked.length === 0) {
+    showMessage("alert alert-danger", "No events selected");
   } else if (yearOfStudy.value === "") {
     showMessage("alert alert-danger", "Year of study not selected");
+  } else if (isMember == null) {
+    showMessage("alert alert-danger", "Check if you are an IEEE Member");
   } else {
     return true;
   }
@@ -67,6 +73,7 @@ function showMessage(classes, msg) {
   div.className = classes;
   div.textContent = msg;
   formContainer.insertBefore(div, form);
+  scrollTo(0, 0);
 
   setTimeout(() => {
     div.remove();
@@ -87,48 +94,3 @@ function isValidEmail(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
-
-// const scriptURL = 'Enter Script url[web app]'
-//     fetch(scriptURL)
-//     .then(
-//         function(response) {
-//         if (response.status !== 200) {
-//             console.log('Looks like there was a problem. Status Code: ' +
-//             response.status);
-//             return;
-//         }
-//         response.json().then(function(data) {
-//             var userData = Object.values(data.user)
-//             //Get[Request] data is in userData
-//           })
-//         }
-//     )
-//     .catch(function(err) {
-//         console.log('Fetch Error :-S', err);
-
-//     })
-
-//     const form = document.forms['google-sheet']
-
-//     form.addEventListener('submit', e => {
-//       e.preventDefault()
-//       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-//         .then(response => {
-//             handleResponse(response);
-//             })
-//         .catch(error =>
-//         {
-//           console.error('Error!', error.message)
-//           handleResponse(error);
-//         })
-//     })
-
-//     function handleResponse(response){
-//         if(response.status === 200){
-//             //response logic
-//         }
-//         else{
-//           //Error logic
-//         }
-
-//     }
