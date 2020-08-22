@@ -1971,11 +1971,14 @@ p {
 #timeline:before {
   content: "";
   width: 3px;
-  height: 100%;
+  height: calc(100% - 8rem);
   background: #4f8b41;
   left: 50%;
   top: 0;
   position: absolute;
+}
+#timeline p {
+  margin-top: 20px;
 }
 #timeline:after {
   content: "";
