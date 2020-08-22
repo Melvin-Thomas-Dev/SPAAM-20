@@ -2034,7 +2034,9 @@ p {
 }
 #timeline .timeline-item .timeline-content h2 {
   padding: 15px;
-  background: #4f8b41;
+  /* background: #4f8b41;    */
+  background: linear-gradient(left, #549634 0%, #66b63e 50%, #549634 100%);
+  background: linear-gradient(to right, #549634 0%, #66b63e 50%, #549634 100%); 
   color: #fff;
   margin: -20px -20px 0 -20px;
   font-weight: 300;
@@ -2128,6 +2130,11 @@ header:before,
   color: black;
   margin: 1.2rem 0.8rem 0 0.8rem;
   transition: 0.1s;
+}
+
+.timeline-date{
+  color: black;
+  font-size: 25px;
 }
 
 @media (max-width: 991px) {
