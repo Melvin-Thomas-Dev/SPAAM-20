@@ -782,6 +782,10 @@ p {
 .header-content {
   margin-top: 59px;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (max-width: 425px) {
