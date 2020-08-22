@@ -7,6 +7,7 @@ const yearOfStudy = document.getElementById("year-of-study");
 const department = document.getElementById("department");
 const ieeeSection = document.getElementById("ieee-section");
 const ieeeRegion = document.getElementById("ieee-region");
+const message = document.getElementById("message");
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycby7ZTmHh3-1X5d0c63wiimhi6qwZb6OKZBoVjIPR0fbVfEdWyg/exec";
@@ -46,7 +47,8 @@ function validateForm() {
     contactNo.value == "" ||
     department.value == "" ||
     ieeeSection.value == "" ||
-    ieeeRegion.value == ""
+    ieeeRegion.value == "" ||
+    message.value == ""
   ) {
     showMessage("alert alert-danger", "Fields shouldn't be empty");
   } else if (!isValidEmail(email.value)) {
