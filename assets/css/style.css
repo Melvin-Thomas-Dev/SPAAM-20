@@ -2129,3 +2129,9 @@ header:before,
   margin: 1.2rem 0.8rem 0 0.8rem;
   transition: 0.1s;
 }
+
+@media (max-width: 991px) {
+  .register {
+    margin-bottom: 1rem;
+  }
+}
