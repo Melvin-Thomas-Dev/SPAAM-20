@@ -48,11 +48,12 @@ function validateForm() {
     email.value == "" ||
     college.value == "" ||
     contactNo.value == "" ||
-    department.value == "" ||
-    ieeeSection.value == "" ||
-    ieeeRegion.value == ""
+    department.value == ""
   ) {
-    showMessage("alert alert-danger", "Fields shouldn't be empty");
+    showMessage(
+      "alert alert-danger",
+      "Fields marked important cannot be empty"
+    );
   } else if (!isValidEmail(email.value)) {
     showMessage("alert alert-danger", "Invalid Email Address");
   } else if (!isPhoneValid(contactNo.value)) {
