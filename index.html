@@ -1320,11 +1320,16 @@
           </div>
           <div class="col-lg-8">
             <div class="contact-form pt-20">
-              <form id="contact-form" method="post">
+              <form id="contact-form" method="post" name="query-sheet">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="single-form">
-                      <input type="text" name="name" placeholder="Your Name" />
+                      <input
+                        type="text"
+                        name="Name"
+                        placeholder="Your Name"
+                        id="query-name"
+                      />
                       <i class="lni-user"></i>
                     </div>
                   </div>
@@ -1332,8 +1337,9 @@
                     <div class="single-form">
                       <input
                         type="email"
-                        name="email"
+                        name="Email"
                         placeholder="Your Email"
+                        id="query-email"
                       />
                       <i class="lni-envelope"></i>
                     </div>
@@ -1341,8 +1347,9 @@
                   <div class="col-md-12">
                     <div class="single-form">
                       <textarea
-                        name="message"
+                        name="Message"
                         placeholder="Enter your query"
+                        id="query-msg"
                       ></textarea>
                       <i class="lni-comments-alt"></i>
                     </div>
