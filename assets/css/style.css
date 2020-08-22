@@ -2142,3 +2142,8 @@ header:before,
     margin-bottom: 1rem;
   }
 }
+
+.header-countdown{
+  padding-top: 0px;
+  padding-bottom: 250px;
+}
