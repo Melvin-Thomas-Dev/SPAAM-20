@@ -2135,6 +2135,7 @@ header:before,
 .timeline-date{
   color: black;
   font-size: 25px;
+}
 
 @media (max-width: 991px) {
   .register {
