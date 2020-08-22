@@ -42,6 +42,7 @@ function validateForm() {
   const checked = Array.from(
     document.querySelectorAll("input[name=events]:checked")
   );
+  const isMember = document.querySelector("input[name=isMember]:checked");
   if (
     name.value == "" ||
     email.value == "" ||
@@ -60,6 +61,8 @@ function validateForm() {
     showMessage("alert alert-danger", "No events selected");
   } else if (yearOfStudy.value === "") {
     showMessage("alert alert-danger", "Year of study not selected");
+  } else if (isMember == null) {
+    showMessage("alert alert-danger", "Check if you are an IEEE Member");
   } else {
     return true;
   }
