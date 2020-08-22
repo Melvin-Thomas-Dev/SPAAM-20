@@ -47,8 +47,7 @@ function validateForm() {
     contactNo.value == "" ||
     department.value == "" ||
     ieeeSection.value == "" ||
-    ieeeRegion.value == "" ||
-    message.value == ""
+    ieeeRegion.value == ""
   ) {
     showMessage("alert alert-danger", "Fields shouldn't be empty");
   } else if (!isValidEmail(email.value)) {
