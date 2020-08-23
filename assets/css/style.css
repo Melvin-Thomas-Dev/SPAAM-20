@@ -2132,8 +2132,8 @@ header:before,
 }
 
 .timeline-date {
-  color: black;
-  font-size: 18px;
+  color: #292723;
+  font-size: 17px;
 }
 
 @media (max-width: 991px) {
@@ -2162,5 +2162,6 @@ header:before,
 
 
 .tl-icon{
-  margin-right: 2%;
+  margin-right: 3%;
+  
 }
