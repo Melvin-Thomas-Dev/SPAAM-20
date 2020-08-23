@@ -2151,3 +2151,11 @@ header:before,
   display: flex;
   justify-content: ;
 } */
+
+@media (max-width: 575px) {
+  .single-client {
+    width: 80%;
+    margin: 2rem auto;
+    /* padding: 1rem 4rem; */
+  }
+}
