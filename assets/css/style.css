@@ -2160,8 +2160,77 @@ header:before,
   }
 }
 
-
-.tl-icon{
+.tl-icon {
   margin-right: 3%;
-  
+}
+.hero-reg-btn-main {
+  margin-top: 100px;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.hero-reg-btn-main a:link,
+.hero-reg-btn-main a:visited {
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+  /* overflow: hidden; */
+  color: #71a755;
+  padding: 1.8rem 4rem;
+  font-size: 22px;
+  border-radius: 52px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+.hero-reg-btn-main a::before {
+  position: absolute;
+  content: "";
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  top: -1px;
+  left: -1px;
+  background: -webkit-linear-gradient(left, #549634 0%, #66b63e 100%);
+  background: -o-linear-gradient(left, #549634 0%, #66b63e 100%);
+  background: linear-gradient(to right, #549634 0%, #66b63e 100%);
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  border-radius: 52px;
+}
+
+.hero-reg-btn-main a:hover {
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-7px);
+}
+
+.hero-reg-btn-main a:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .hero-reg-btn-main {
+    top: 40%;
+  }
+  .hero-reg-btn-main a:link,
+  .hero-reg-btn-main a:visited {
+    padding: 1.2rem 2.2rem;
+    font-size: 18px;
+  }
+}
+@media (max-width: 575px) {
+  .hero-reg-btn-main {
+    top: 50%;
+  }
+  .hero-reg-btn-main a:link,
+  .hero-reg-btn-main a:visited {
+    padding: 1.2rem 2.2rem;
+    font-size: 18px;
+  }
 }
