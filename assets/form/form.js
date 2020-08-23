@@ -16,7 +16,7 @@ const form = document.forms["google-sheet"];
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  if (validateForm() && confirm("Are You Sure?")) {
+  if (validateForm() && confirm("Are You Sure To Submit?")) {
     addBtnLoader();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then(response => {
@@ -30,7 +30,7 @@ function addBtnLoader() {
   btn.disabled = "true";
   btn.innerHTML = `
     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-    Loading...
+    Submitting...
   `;
 }
 
