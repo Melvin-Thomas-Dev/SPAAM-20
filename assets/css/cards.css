@@ -1,7 +1,7 @@
 .single-pricing {
   /* box-sizing: border-box; */
+  height: 100%;
   padding: 0;
-  height: 93%;
   border: 1px solid #d3d3d3;
   /* background-color: #d3d3d3; */
 }
@@ -22,4 +22,8 @@
   .container {
     max-width: 1200px;
   }
+}
+
+.single-pricing-container {
+  height: 93%;
 }
