@@ -861,7 +861,7 @@ p {
   position: relative;
   padding-left: 15px;
 }
-.about-content .date span::before {
+/* .about-content .date span::before {
   position: absolute;
   content: "";
   width: 55px;
@@ -869,7 +869,7 @@ p {
   border: 6px solid rgba(79, 139, 65, 0.18);
   top: -18px;
   left: 0;
-}
+} */
 .counter-area {
   background-image: url(../images/dots.jpg);
   background-repeat: repeat;
