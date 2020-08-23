@@ -2163,6 +2163,7 @@ header:before,
 .tl-icon {
   margin-right: 3%;
 }
+
 .hero-reg-btn-main {
   margin-top: 100px;
   position: absolute;
@@ -2178,11 +2179,12 @@ header:before,
   z-index: 5;
   /* overflow: hidden; */
   color: #71a755;
-  padding: 1.8rem 4rem;
-  font-size: 22px;
+  padding: 1.8rem 3.5rem;
+  font-size: 20px;
   border-radius: 52px;
   transition: all 0.3s;
-  font-weight: 500;
+  letter-spacing: 6px;
+  font-weight: 600;
 }
 .hero-reg-btn-main a::before {
   position: absolute;
