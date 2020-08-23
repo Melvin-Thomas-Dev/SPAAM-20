@@ -8,6 +8,7 @@ const department = document.getElementById("department");
 const ieeeSection = document.getElementById("ieee-section");
 const ieeeRegion = document.getElementById("ieee-region");
 const message = document.getElementById("message");
+const btn = document.getElementById("btn-submit");
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycby7ZTmHh3-1X5d0c63wiimhi6qwZb6OKZBoVjIPR0fbVfEdWyg/exec";
@@ -16,14 +17,22 @@ const form = document.forms["google-sheet"];
 form.addEventListener("submit", e => {
   e.preventDefault();
   if (validateForm() && confirm("Are You Sure?")) {
+    addBtnLoader();
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then(response => {
-        // console.log(response);
         hideFormDisplaySuccess();
       })
       .catch(error => console.error("Error!", error.message));
   }
 });
+
+function addBtnLoader() {
+  btn.disabled = "true";
+  btn.innerHTML = `
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  `;
+}
 
 function hideFormDisplaySuccess() {
   document.querySelector(".form-container").style.display = "none";
